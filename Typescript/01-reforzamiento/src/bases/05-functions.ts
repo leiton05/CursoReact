@@ -1,26 +1,35 @@
+interface User {
+    uid: string;
+    username: string;
+}
+
+
+
 function greet( name: string ): string {
     return `Hola ${name}`
 }
 
-const greet2 = (name: string): string => {
-    return `Hola ${name}`;
-}
+const greet2 = (name: string): string => `Hola ${name}`;
 
 
-function getUser() {
+
+function getUser(): User {
     return {
         uid: 'ABC-123',
         username: 'leiton05'
     }
 }
 
-const getUser2 = () => {
-    return {
+const getUser2 = () => ({
         uid: 'EFG-456',
         username: 'nani'
-    }
-}
+    })
 
+
+
+const myNumbers: number[] = [1, 2, 3, 4, 5];
+
+myNumbers.forEach((value)=>console.log({value}));
 
 
 
